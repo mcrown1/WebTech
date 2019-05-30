@@ -7,10 +7,13 @@
     <style type="text/css">
         h1{font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: navy; text-align: center}
         h2{font-family:Arial; color: red; font-size: 22pt; text-align: left}
+        h2#color{color: green}
         h3{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: olive; font-size: 1.5em; text-align: right}
         hr{width: 75%; color: maroon}
         p{font-family: cursive; color: olive}
         img{float: left; border: 5px solid red; padding: 10px; margin-right: 30px; margin-left: 10px; margin-top: 30px; margin-bottom: 10px}
+        p#border{border: 3px dotted red}
+        .element{color: blue; font-style: italic; text-decoration: underline}
     </style>
 
 </head>
@@ -24,12 +27,12 @@
     <hr>
 
     <h1>Quote One from Winston Churchill </h1>
-    <p>
+    <p class="element">
         Criticism may not be agreeable, but it is necessary. It fulfils the same function as pain in the human body. It calls attention
         to an unhealthy state of things.
     </p>
     <div>
-        <h3>Quote Two from Winston Churchill </h3>
+        <h3 class="element">Quote Two from Winston Churchill </h3>
 
         <p>
             Courage is rightly esteemed the first of human qualities... because it is the quality which guarantees all others. Courage
@@ -37,13 +40,13 @@
         </p>
 
 
-        <h2> Quote Three from Winston Churchill</h2>
+        <h2 id="color"> Quote Three from Winston Churchill</h2>
         <h3> This paragraph will have a border</h3>
-        <p>
+        <p id="border">
             Continuous effort - not strength or intelligence - is the key to unlocking our potential.
         </p>
         <hr>
-        <p>
+        <p class="element">
             The tiger (Panthera tigris) is the largest cat species, reaching a total body length of up to 3.3 metres (11 ft) and weighing
             up to 306 kg (670 lb). It is the third largest land carnivore (behind only the Polar bear and the Brown bear).
             Its most recognizable feature is a pattern of dark vertical stripes on reddish-orange fur with lighter underparts.
