@@ -1,0 +1,10 @@
+table{width: 500px; margin-right: auto; margin-left: auto; font-family: Arial;}
+tr,td{border: 1px solid black; padding: 3px; vertical-align: top}
+img{width: 100%}
+p.scroll{
+    background-color: lime;
+    width: 250px; height: 300px;
+    overflow: scroll;
+    padding-right: 10px;
+    padding-left: 10px;
+}
