@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CS12-InClass</title>
+
+    <style type="text/css">
+        /* Your styles go here */
+        body {
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+
+    <h2> Manipulating Styles and Images </h2>
+
+    <p><img id = "img" onmouseover="enlargeImage(this.id)" onmouseout="shrinkImage(this.id)" src="usa.png" alt="Image goes here" title="map of USA" style="width:400px"></p>
+
+    <p><img id="tiger" src="tiger1.jpg" alt="Image goes here" title="tiger" style="width: 400px" onmouseover="enlargeImage(this.id)" onmouseout="shrinkImage(this.id)"></p>
+    <hr>
+    <script>
+        function enlargeImage(grace) {
+            let myImg = document.getElementById(grace);
+            let temp = parseInt(myImg.style.width)*1.5;
+            myImg.style.width = temp + "px";
+            myImg.style.border = "1px solid red";
+        }
+        function shrinkImage(jaylen) {
+            let myImg = document.getElementById(jaylen);
+            let temp = parseInt(myImg.style.width)/1.5;
+            myImg.style.width = temp + "px";
+            myImg.style.border="0";
+        }
+    </script>
+</body>
+
+</html>

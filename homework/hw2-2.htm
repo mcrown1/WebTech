@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 2</title>
+        <style type="text/css">
+            body{background-color: black}
+            div{background-image: url("../classwork/beaver.jpg"); background-repeat: repeat-x; height: 200px;}
+            table,th,tr{background-color: silver; margin-left: auto; margin-right: auto; width: 1000px; border: 1px solid black;}
+            p{text-align: center; font-size: 3em; color: white; margin: 30px}
+            #heading{background-color: white; text-align: center;}
+        </style>
+
+    </head>
+    <body>
+        <p>Soap Survey</p>
+        <form method="POST" action="" name="myForm">
+            <table>
+                <tr>
+                    <th>Soap Image</th><th>Soap Color<br> Preference</th><th>Soap Purchase<br> Intent</th><th>Soap Features Liked</th>
+                </tr>
+                <tr>
+                    <th><img src="../classwork/soap-2.jpg"></th>
+                    <th style="text-align: left">
+                            <input type="radio" name="color" value="green">Green <br>
+                            <input type="radio" name="color" value="gold">Gold (shown) <br>
+                            <input type="radio" name="color" value="red">Red</th>
+                    <th>At $5.00/unit<br>
+                        <select>
+                            <option value="5">Definitely Buy</option>
+                            <option value="4">Likely Buy</option>
+                            <option value="3">Undecided Buy</option>
+                            <option value="2">Unlikely Buy</option>
+                            <option value="1">Not Buy</option>
+                        </select>
+                    </th>
+                    <th style="text-align: left">
+                        <input type="checkbox" name="feature" value="shape">Shape<br>
+                        <input type="checkbox" name="feature" value="size">Size<br>
+                        <input type="checkbox" name="feature" value="smell">Smell<br>
+                        <input type="checkbox" name="feature" value="texture">Texture
+                    </th>
+                </tr>
+                <tr>
+                    <th><img src="../classwork/soap-1.jpg"></th>
+                    <th style="text-align: left">
+                        <input type="radio" name="color2" value="ivory">Ivory <br>
+                        <input type="radio" name="color2" value="wood">Sandal Wood (shown) <br>
+                        <input type="radio" name="color2" value="pink">Pink </th>
+                    </th>
+                    <th>At $8.00/unit<br>
+                        <select>
+                            <option value="5">Definitely Buy</option>
+                            <option value="4">Likely Buy</option>
+                            <option value="3">Undecided Buy</option>
+                            <option value="2">Unlikely Buy</option>
+                            <option value="1">Not Buy</option>
+                        </select>
+                    </th>
+                    <th style="text-align: left">
+                        <input type="checkbox" name="feature" value="shape">Shape<br>
+                        <input type="checkbox" name="feature" value="size">Size<br>
+                        <input type="checkbox" name="feature" value="smell">Smell<br>
+                        <input type="checkbox" name="feature" value="texture">Texture
+                    </th>
+                </tr>
+                <tr><th id="heading" colspan="4">Tell us about yourself...</th></tr>
+                <tr>
+                    <th>Gender:
+                        <select>
+                            <option value="1">Female</option>
+                            <option value="0">Male</option>
+                        </select>
+                    </th>
+                    <th colspan="3">
+                        Age: (under 25 enter 1,25-40 enter 2, else enter 3) <input style="background-color: yellow; width: 5" type="number" maxlength="3">
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        Your comments are welcome:<br>
+                        <input type="text" style="background-color: yellow; width: 99%; height: 75px">
+                    </th>
+                    <th colspan="2"><input type="button" value="Done">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Oops" style="background-color: red"></th>
+                </tr>
+            </table>
+        </form>
+        
+        <div></div>
+    </body>
+</html>

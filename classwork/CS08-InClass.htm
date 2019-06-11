@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - Form Demo</title>
+
+    </head>
+    <body>
+        <h1>Form Demo</h1>
+        <form method="POST" action="" name="myForm">
+            <p>
+                First name:
+                <input type="text" name="firstName" maxlength="40" placeholder="Enter your first name here">
+                Last name:
+                <input type="text" name="lastName" maxlength="40" placeholder="Enter your last name here">
+            </p>
+            <p>
+                Password:
+                <input type="password" name="pw" maxlength="">
+            </p>
+            <p>
+                Gender:
+                Male <input type="radio" name="gender" value="male">
+                Female <input type="radio" name="gender" value="female">
+                I don't want to say <input type="radio" name="gender" value="unknown">
+            </p>
+            <p>
+                Which gaming console(s) do you own? (Select all that apply)
+                <ul>
+                    <li><input type="checkbox" name="game" value="xbox">xbox 1</li>
+                    <li><input type="checkbox" name="game" value="ps">Play Station 4</li>
+                    <li><input type="checkbox" name="game" value="switch">Nintendo Switch</li>
+                </ul>
+            </p>
+            <p>
+                Something we don't see.
+                <input type="hidden" name="whatever" value="anything">
+            </p>
+            <p>
+                In which state do you live?
+                <select>
+                    <option value="MA">Massachusetts</option>
+                    <option value="VT">Vermont</option>
+                    <option value="RI">Road Island</option>
+                </select>
+            </p>
+            <!-- <input type="submit" value="Surprise!" name="submit"-->
+            <button type="submit">
+                <img src="images/mailbog.png" height="30" alt="submit_button" />
+            </button>
+            <input type="reset" value="I regret!" name="reset">
+        </form>
+    </body>
+</html>
