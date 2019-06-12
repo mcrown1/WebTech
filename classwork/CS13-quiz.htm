@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <style type="text/css">
+      h1 {
+        text-align: center;
+        font-family: Arial;
+        color: Navy;
+      }
+      p {
+        margin-left: 300px;
+        margin-right: 300px;
+        font-size: 14pt;
+      }
+      div {
+        margin-left: 300px;
+        margin-right: 300px;
+      }
+      img {
+        width: 20%;
+        vertical-align: middle;
+      }
+      span {
+        vertical-align: middle;
+      }
+    </style>
+
+    <script></script>
+  </head>
+
+  <body>
+    <!-- Your HTML goes here -->
+    <h1>Reflect the Image</h1>
+
+    <p>
+      There are two images shown below along with two text strings. Create the
+      functionality whereby if you click on the Smiley.jpg image, the text
+      string "Web Tech Rocks" is shown in red font, size 2em, using Lucida
+      Handwriting with a yellow background. If you click on frown.jpg image, the
+      string "Web Tech Sucks" is shown in green font, bold, size 2em, and using
+      Arial. When one text string is shown, the other should not be displayed.
+      Use as many functions as you see necessary to complete this functionality.
+    </p>
+    <div>
+      <img src="smiley.jpg" id="smiley" onclick="smileyFunction()" alt="Smiling Face" title="Smile" />
+      <span id="rocks">Web Tech Rocks!</span>
+    </div>
+    <div>
+      <img src="frown.jpg" id="frowny" alt="Frown Face" onclick="frownyFunction()" title="Sad" />
+      <span id="sucks">Web Tech Sucks!</span>
+    </div>
+
+    <script type="text/javascript">
+        function smileyFunction(){
+            document.getElementById("rocks").style.visibility = "visible";
+            document.getElementById("rocks").style.color = "red";
+            document.getElementById("rocks").style.size = "2em";
+            document.getElementById("rocks").style.backgroundColor = "yellow";
+            document.getElementById("rocks").style.fontFamily = "Lucida";
+            document.getElementById("sucks").style.visibility = "hidden";
+        }
+        function frownyFunction(){
+            document.getElementById("sucks").style.visibility = "visible";
+            document.getElementById("sucks").style.fontWeight = "bold"
+            document.getElementById("sucks").style.color = "green";
+            document.getElementById("sucks").style.size = "2em";
+            document.getElementById("sucks").style.fontFamily = "Arial";
+            document.getElementById("rocks").style.visibility = "hidden";
+        }
+        </script>
+  </body>
+</html>
