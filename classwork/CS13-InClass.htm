@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CS13-InClass</title>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+        p {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            border: 15px ridge yellow;
+            width: 50%;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <h1> Changing Images Using User inputs - Click on Image below to start</h1>
+    <p>
+        <img src="" id="leaf" alt="Click here to see the image of your choice" title="leaf picture" onclick="leafType()"/>
+    </p>
+    <script>
+        function leafType() {
+            let leaf = prompt("What is your favorite type of leaf?");
+            if(leaf.toLowerCase() == "maple") {
+                let type = document.getElementById("leaf");
+                type.src="maple.jpg";
+                type.title="maple leaf picture";
+            } else if(leaf.toLowerCase() == "shamrock") {
+                let type = document.getElementById("leaf");
+                type.src="shamrock.jpg";
+                type.title="shamrock leaf picture";
+            } else if(leaf.toLowerCase() == "clover") {
+                let type = document.getElementById("leaf");
+                type.src="clover.jpg";
+                type.title="clover leaf picture";
+            } else if(leaf.toLowerCase() == "thyme") {
+                let type = document.getElementById("leaf");
+                type.src="thyme.jpg";
+                type.title="thyme leaf picture";
+            } else {
+                document.getElementById("leaf").alt = "Your input is incorrect";
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - Conditional Statement Demo</title>
+    </head>
+    <body>
+        <h1>Conditional Statements Demo</h1>
+        <button id="btn-click" onclick="ask()">Click Me</button>
+        <button onclick="clean()">Reset</button>
+        <p>
+            You entered: <span id="userInput"></span>
+        </p>
+        <p>Result: <span id="result"></span>
+            <br>
+            <img id="img-result" src="">
+        </p>
+
+        <script>
+            function ask(){
+                // let message=prompt("what day is it today?");
+                // document.getElementById("userInput").innerHTML = "<i><b>"+message+"</b></i>";
+                // let name = prompt("what is your name?");
+                // if(message == "Wednesday" && name== "Molly") {
+                //     document.getElementById("result").innerHTML = "Correct! Have a nice " + message +", " + name + "!";
+                // }
+                // else {
+                //     document.getElementById("result").innerHTML="Wrong!";
+                // }
+                let gender = prompt("What is your gender?");
+                document.getElementById("userInput").innerHTML = gender;
+                if(gender.toLowerCase() == "male" || gender.toLowerCase() == "man") {
+                    document.getElementById("result").innerHTML = "Hello, sir! How old are you?";
+                    document.getElementById("img-result").src="man.png"
+                } else if (gender.toLowerCase() == "female" || gender.toLowerCase() == "woman") {
+                    document.getElementById("result").innerHTML = "Hello, madam! How old are you?";
+                    document.getElementById("img-result").src = "tiger1.jpg";
+                } else {
+                    document.getElementById("result").innerHTML = "Hey buddy! How old are you?";
+                    document.getElementById("img-result").src = "pups.jpg";
+                    document.getElementById("img-result").style.width = "400px";
+                }
+            }
+            function clean() {
+                document.getElementById("userInput").innerHTML="";
+                document.getElementById("result").innerHTML="";
+            }
+        </script>
+    </body>
+</html>
