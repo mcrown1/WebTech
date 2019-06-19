@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS15-Processing Form Inputs</title>
+    <style type="text/css">
+        form {
+            margin-left: 200px;
+            margin-right: 200px;
+            padding: 30px;
+            font-family: Arial;
+            font-weight: bold;
+            background-color: Silver;
+        }
+        h1 {
+            text-align: center;
+            font-family: Arial;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+
+    <h1>Processing form inputs</h1>
+    <form action="" method="post" id="form1">
+        <p>
+            <label>
+                Enter your name:
+                <input type="text" name="name" size="40"/>
+            </label>
+            <label>
+                Enter your age :
+                <input type="text" name="age"
+                       size="4"/>
+            </label>
+        </p>
+        <p>
+            <label>
+                Select your gender:
+                <select name="gender">
+                    <option value="Female"> Female</option>
+                    <option value="Male"> Male</option>
+                </select>
+            </label>
+        </p>
+        <p>
+
+            <label>Your selections will appear here:
+                <textarea name="result" cols="40" rows="3"></textarea>
+            </label>
+        </p>
+        <p>
+            I don't want you to tell my age. <input type="checkbox" name="noAge">
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Show Me" style="width:100px;height:40px" onclick="return displayInfo()"/>
+            <input type="reset" name="reset" value="Clear Me" style="width:100px;height:40px"/>
+
+        </p>
+
+    </form>
+
+    <script>
+        function displayInfo() {
+            let form = document.getElementById("form1");
+            let name = form.name.value;
+            let age = form.age.value;
+            let gender = form.gender.value;
+            let noAge = form.noAge.checked;
+
+            if(name == "" || age == "") {
+                alert("You forgot to enter your name or age");
+            }
+            else if (isNan(age)) {
+                alert("Your age must be a number");
+            } else {
+                let message;
+                if (noAge) {
+                message = "Name: " + name + "\nGender: " + gender;
+                } else {
+                    message = "Name: " + name + "\nAge: " + age + "\nGender: " + gender;
+                }
+            form.result.value = message;
+            }
+            return false;
+        }
+        
+    </script>
+
+</body>
+
+</html>

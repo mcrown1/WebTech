@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CS15-InClass2 - Temperature Converter</title>
+    <style type="text/css">
+        form {
+            font-family: Arial;
+            font-weight: bold;
+            padding: 60px;
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: Silver;
+        }
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        div#d1 {
+            margin-bottom: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <h1> Celsius Fahrenheit Converter</h1>
+    <form action="" method="post" id="form1">
+        <div id="d1">
+            <label>
+                Celsius:
+                <input type="text" name="cel" size="10"/>
+            </label>
+            <label>
+                Fahrenheit:
+                <input type="text" name="far" size="10"/>
+            </label>
+        </div>
+
+        <div style="margin-left:100px">
+            <input type="submit" name="submit" value="Convert" style="width:80px; height:40px;" onclick="return convert()"/>
+            <input type="reset" name="reset" value="Clear" style="width:80px; height:40px;"/>
+        </div>
+    </form>
+
+    <script>
+        function convert() {
+            let form = document.getElementById("form1");
+            let cel = form.cel.value;
+            let far = form.far.value;
+            let celcius;
+            let fahrenheit;
+
+            if (cel=="" && far=="") {
+                alert("You need to input a temperature");
+            } else if(isNaN(cel) || isNaN(far)) {
+                alert("You need to enter numbers");
+            } else if (cel!="" && far!="") {
+                    alert("Don't put temperatures for both units!");
+            } else {
+                if (cel!="") {
+                    celcius = parseFloat(cel);
+                } else if(far!="") {
+                    fahrenheit = parseFloat(far); 
+                }
+                
+                if (cel=="" && far!="") {
+                    form.cel.value= (fahrenheit - 32)*(5/9);
+                } else if(cel!="" && far=="") {
+                    form.far.value = celcius*(9/5) + 32;
+                }
+            }
+            return false;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - Molly Crown</title>
+    </head>
+    <body id="body">
+        <form action="" method="post" id="form1">
+            Red: <input type="radio" name="colors" value="red">
+            Blue: <input type="radio" name="colors" value="blue">
+            Yellow: <input type="radio" name="colors" value="yellow">
+             Green: <input type="radio" name="colors" value="green">
+             <br>
+             <input type="button" value="Click Me!" onclick="return selectColor()">
+             <select name="state" onchange="return selectState()">
+                 <option value="null">Select one</option>
+                 <option value="MA">Massachusetts</option>
+                 <option value="NY">New York</option> 
+                 <option value="VT">Vermont</option>
+             </select>
+        </form>
+        <script>
+            function selectState() {
+                let form = document.getElementById("form1");
+                let userChoice;
+                if(form.state.value == "null") {
+                    alert("Please select a value");
+                } else if (form.state.value=="MA"){
+                    windows.open('https://www.mass.gov/', 'Massachusetts', 'width=300', 'height=200');
+                } else if (form.state.value=="NY"){
+                    windows.open('https://www.ny.gov/', 'New York', 'width=300', 'height=200');
+                } else if (form.state.value=="VT"){
+                    windows.open('https://www.vermont.gov/', 'Vermont', 'width=300', 'height=200');
+                }
+                return false;
+            }
+            function selectColor() {
+                let form = document.getElementById("form1");
+                let userChoice;
+                for(let i = 0; i< form.colors.length;++i) {
+                    if(form.colors[i].checked) {
+                        userChoice = form.colors[i].value
+                    }
+                }
+                document.getElementById("body").style.backgroundColor = userChoice;
+
+                let sum = 0;
+                for(let i = 0; i<101; ++i) {
+                    sum+=i;
+                }
+                alert(sum);
+                return false;
+            }
+        </script>
+    </body>
+</html>
