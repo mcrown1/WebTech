@@ -28,13 +28,15 @@
             let form = document.getElementById("form1");
             let start = parseInt(document.getElementById("start").value);
             let finish = parseInt(document.getElementById("finish").value);
-            alert(start);
-            alert(finish);
             for(let i = start; i<finish+1; i++) {
                 sum += i*i;
             }
             document.getElementById("result").innerHTML = sum;
             return false;
+        }
+        function clear() {
+            document.getElementById("start").value = "";
+            document.getElementById("finish").value = "";
         }
     </script>
 </head>
@@ -47,13 +49,14 @@
         <p id="p1">
             <label>From:
                 <input type="text" name="from" size="10" id="start"/>
-            </label> <label>To:
-            <input type="text" name="to" size="10" id="finish"/>
-        </label>
+            </label>
+            <label>To:
+                <input type="text" name="to" size="10" id="finish"/>
+            </label>
         </p>
         <p>
             <input type="submit" name="Sum" value="Sum" onclick="return sum()"/>
-            <input type="reset" name="reset" value="Clear"/>
+            <input type="reset" name="reset" value="Clear" onclick="clear()"/>
         </p>
 
         <p>The sum of squares is <span id="result">?</span>.</p>
