@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title>Web Technologies - Counting Down</title>
+        </head>
+    <body>
+        <button onclick="countDown()"></button>
+        <p id="seconds"></p>
+        <img id="rocket">
+        <script>
+            let counter=5;
+            function countDown() {
+                document.getElementById("seconds").innerHTML += counter + " ";
+                counter--;
+                if(counter>= 0) {
+                    setTimeout("countDown()", 1000);
+                } else {
+                    document.getElementById("seconds").innerHTML+="Take off";
+                    document.getElementById("bodyA").style.backgroundImage = urL("falcon9.jpg");
+                    document.getElementById("rocket").src = "falcon9.jpg";
+                    document.getElementById("rocket").style.width = "100px";
+                    // let audio = new Audio("Rocket-Sound.mp3");
+                    // audio.play();
+                }
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <title>Homework 3-3</title>
+
+    <style type="text/css">
+        h1 {
+            color: navy;
+            font-family: Arial;
+        }
+        p#instruction {
+            font-family: Cursive;
+            color: Navy;
+            margin-right: 300px;
+        }
+        div {
+            padding-left: 50px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            background-color: Silver;
+            font-family: Cursive;
+            color: Navy;
+            width: 60%;
+        }
+        body {
+            padding-left: 100px;
+        }
+        p#number {
+            text-align: center;
+            font-size: 300%;
+        }
+        span {
+            color: Lime;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Homework 3-3: Counting down...</h1>
+    <p id="instruction">Modify this page so that the following animation starts when the button is clicked (5 pts).
+        Every 500 milliseconds, the number in the p tag with id "number" should decrease by 1 (10 pts). When the number
+        reaches 0, the animation should stop and display an alert box(10 points). HINT: If the user had
+        changed the ending value in the input box before clicking the button, the animation will stop and alert when the
+        countdown reaches that number (5 points). You may assume that the entry in the input box is an integer between
+        19 and 0 inclusive.</p>
+
+
+    <div>
+        <p id="number">20</p>
+        <p>
+            <label>Ending value:
+                <input type="text" value="0"/>
+            </label>
+        </p>
+        <button>Count Down</button>
+    </div>
+</body>
+
+</html>

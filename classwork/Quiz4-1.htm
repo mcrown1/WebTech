@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Quiz 4-1: Calculate the sum of squares</title>
+    <style type="text/css">
+        form {
+            font-family: Arial;
+            font-weight: bold;
+            padding: 60px;
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: Silver;
+        }
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function sum() {
+            let sum = 0;
+            let form = document.getElementById("form1");
+            let start = parseInt(document.getElementById("start").value);
+            let finish = parseInt(document.getElementById("finish").value);
+            alert(start);
+            alert(finish);
+            for(let i = start; i<finish+1; i++) {
+                sum += i*i;
+            }
+            document.getElementById("result").innerHTML = sum;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <h1> Another Simple Calculator</h1>
+    <p> Please use <b>for</b> loop to sum up <strong>squares</strong> of all the integers between these two
+        numbers (inclusive). </p>
+    <form action="" method="post" id="form1">
+        <p id="p1">
+            <label>From:
+                <input type="text" name="from" size="10" id="start"/>
+            </label> <label>To:
+            <input type="text" name="to" size="10" id="finish"/>
+        </label>
+        </p>
+        <p>
+            <input type="submit" name="Sum" value="Sum" onclick="return sum()"/>
+            <input type="reset" name="reset" value="Clear"/>
+        </p>
+
+        <p>The sum of squares is <span id="result">?</span>.</p>
+    </form>
+
+
+</body>
+
+</html>

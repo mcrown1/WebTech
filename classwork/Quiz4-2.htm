@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Quiz 4-2: Investment Calculator</title>
+
+    <style type="text/css">
+        /* Your styles go here */
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        #question {
+            font-size: large;
+            color: blue;
+        }
+    </style>
+
+    <script>
+        let year = 0;
+        let value = 100;
+        function time() {
+            
+            year++;
+            value = value * 1.05;
+            
+            document.getElementById("yr").value = year;
+            document.getElementById("inv").value = value;
+
+            setTimeout("time()", 2000);
+            
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <h1>Value of a $100 Investment at 5% Interest</h1>
+    <p id="question">Write a function so that clicking the Run button will start an animation that changes the data in
+        the form every 2 seconds. Every two seconds the year should increase by 1 and the value should be multiplied by
+        1.05. </p>
+    <p><label for="yr">Year:</label><input type="text" name="y" value="0" id="yr"/></p>
+    <p><label for="inv">Value:</label><input type="text" name="v" value="100" id="inv"/></p>
+    <p>
+        <button onclick="time()">Run</button>
+    </p>
+</body>
+</html>

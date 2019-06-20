@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homework 3 - 1</title>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+            font-family: Arial;
+            color: Navy;
+        }
+        img {
+            border: 6px solid navy;
+            margin-bottom: 100px;
+        }
+        p.cent {
+            text-align: center;
+        }
+        ul,
+        p#inst {
+            margin-right: 200px;
+            margin-left: 200px;
+            font-size: 1em;
+        }
+        li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-right: 20px;
+            background-color: White;
+            height: 50px;
+            width: 140px
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="title"> The Animal Name Goes Here</h1>
+    <p class="cent">
+        <img alt="Image Goes Here" src="" title="Animal Name" id="pic" class="over" onmouseout="selectAnimal(this.id)" onmouseover="selectAnimal(null)"/>
+    </p>
+    <p class="cent" id="question">
+        <button onclick="selectAnimal(this.value)" value="shep" id="first">German Shepherd</button>
+        <button onclick="selectAnimal(this.value)" value="peng" id="second">Penguin</button>
+        <button onclick="selectAnimal(this.value)" value="snow" id="third">Snow Leopard</button>
+        <button onclick="selectAnimal(this.value)" value="lynx" id="last">Lynx</button>
+    </p>
+    <p id="inst">The homework is graded out of 25 points. Please create the functionality, using JavaScript, to do the
+        following:</p>
+    <ul>
+        <li> Display the image of the animal corresponding to the button the user clicks on. The place-holder for the
+            image is provided to you. (8 points).
+        </li>
+        <li> Change the color of the image border based on the animal displayed. Yellow for German Shepherd, Red for
+            Penguin,Green for Snow Leopard and, Lime for Lynx. If my color choices are poor, you can pick your own
+            colors as long as it is different and unique for each animal image.(4 points)
+        </li>
+        <li> Change the heading, "The Animal Name Goes Here" to the type of animal shown. (3 points)</li>
+        <li> Change the background color of the button that the user clicks on to Silver. Only the button the user has
+            clicked on must be Silver. All others must be White.(5 points)
+        </li>
+        <li>Write another function to enlarge the image by 75% when the user mouses-over it and return it to normal size
+            when the user mouses-out of the image.
+        </li>
+        <li> Please use a single function for all of the above functionality (5 points). If you cannot, please use as
+            many functions as needed (0 points)
+        </li>
+    </ul>
+
+    <script>
+        function selectAnimal(choice) {
+            let form = document.getElementById("question");
+            let title = document.getElementById("title");
+            let pic = document.getElementById("pic");
+            if(choice=="shep") {
+                pic.src="../classwork/shepherd.jpg";
+                pic.title="German Shepherd"
+                pic.style.borderColor = "yellow";
+                pic.style.width = "300px";
+                title.innerHTML="German Shepherd";
+                document.getElementById("first").style.backgroundColor = "silver";
+                document.getElementById("second").style.backgroundColor = "white";
+                document.getElementById("third").style.backgroundColor = "white";
+                document.getElementById("last").style.backgroundColor = "white";
+            } else if(choice=="peng") {
+                pic.src="../classwork/penguin.jpg";
+                pic.title="Penguin"
+                pic.style.borderColor = "red";
+                pic.style.width = "300px";
+                title.innerHTML="Penguin";
+                document.getElementById("first").style.backgroundColor = "white";
+                document.getElementById("second").style.backgroundColor = "silver";
+                document.getElementById("third").style.backgroundColor = "white";
+                document.getElementById("last").style.backgroundColor = "white";
+            } else if(choice=="snow") {
+                pic.src="../classwork/snowleopard.jpg";
+                pic.title="Snow Leopard"
+                pic.style.borderColor = "green";
+                pic.style.width = "300px";
+                title.innerHTML="Snow Leopard";
+                document.getElementById("first").style.backgroundColor = "white";
+                document.getElementById("second").style.backgroundColor = "white";
+                document.getElementById("third").style.backgroundColor = "silver";
+                document.getElementById("last").style.backgroundColor = "white";
+            } else if(choice=="lynx") {
+                pic.src="../classwork/lynx.jpg";
+                pic.title="Lynx"
+                pic.style.borderColor = "lime";
+                pic.style.width = "300px";
+                title.innerHTML="Lynx";
+                document.getElementById("first").style.backgroundColor = "white";
+                document.getElementById("second").style.backgroundColor = "white";
+                document.getElementById("third").style.backgroundColor = "white";
+                document.getElementById("last").style.backgroundColor = "silver";
+            } else if(choice==null) {
+                pic.style.width = parseInt(pic.style.width) *1.75 +"px";
+            } else if(choice=="pic") {
+                pic.style.width = parseInt(pic.style.width) /1.75 +"px";;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

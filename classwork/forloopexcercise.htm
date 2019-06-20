@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - For Loop Excercise</title>
+
+    </head>
+    <body>
+        <button onclick="calc()">Calculate</button>
+        <p id="result"><span id="i"></span></p>
+    </body>
+    <script>
+        function calc() {
+            let sum=0;
+            for(let i = 0; i<=100; i+=2) {
+                document.getElementById("i").innerHTML += " " + i.toString();
+                sum += i;
+            }
+            document.getElementById("result").innerHTML=sum;
+            let d = Date();
+            
+            let x = Math.floor(Math.random()*800);
+            let y = Math.floor(Math.random()*400);
+            document.getElementById("result").style.position="absolute";
+            document.getElementById("result").style.left= x + "px";
+            document.getElementById("result").style.top = y+"px";
+            
+
+            let endOfDay;
+        }
+    </script>
+</html>

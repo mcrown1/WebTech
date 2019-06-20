@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Slide Show</title>
+    <style type="text/css">
+        p {
+            text-align: center;
+            font-size: xx-large;
+        }
+        img {
+            border-width: 10px;
+            border-style: solid;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var p=300; k=0;
+        var messageList = new Array("Hey Jude, don't make it bad", "Take a sad song and make it better", "remember to let her into your heart",
+        "Then you can start to make it better");
+        function doScroll() {
+            document.getElementById("msg").style.left = p +"px";
+            if(p>700) {
+                p=300;
+                k++;
+                if (k==messageList.length) {
+                    k=0;
+                }
+                document.getElementById("msg").innerHTML = messageList[k];
+                document.getElementById("msg").style.left=p+"px";
+            } else {
+                p=p+1;
+            }
+            setTimeout("doScroll()", 100);
+        }
+        </script>
+    </head>
+    <body onload="doScroll()">
+            <p id="msg"></p>
+        </body>
+</html>
