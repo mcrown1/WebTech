@@ -102,32 +102,10 @@
             let first = Math.floor(Math.random()*3);
             let second = Math.floor(Math.random()*3);
             let third = Math.floor(Math.random()*3);
-            if(first == 0) {
-                first = "I";
-            } else if(first == 1) {
-                first = "We";
-            } else if(first == 2) {
-                first = "They";
-            }
-
-            if(second == 0) {
-                second = "will";
-            } else if(second == 1) {
-                second = "can";
-            } else if(second == 2) {
-                second = "must";
-            }
-            
-            if(third == 0) {
-                third = "eat.";
-            } else if(third == 1) {
-                third = "study.";
-            } else if(third == 2) {
-                third = "play.";
-            }
-
-
-            document.getElementById("text").innerHTML= first + " " + second + " " + third;
+            var word1 = new Array("I", "We", "They");
+            var word2 = new Array("will", "can", "must");
+            var word3 = new Array("eat.", "study.", "play.");
+            document.getElementById("text").innerHTML = word1[first] + " " + word2[second] + " " + word3[third];
             return false;
         }
     </script>

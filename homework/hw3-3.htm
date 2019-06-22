@@ -36,6 +36,18 @@
             color: Lime;
         }
     </style>
+    <script>
+        function animation() {
+            let num = document.getElementById("number").innerText;
+            let end = document.getElementById("text").value;
+            if (num > end) {
+                document.getElementById("number").innerText--;
+                setTimeout("animation()", 500);
+            } else {
+                alert("Countdown has ended");
+            }
+        }
+    </script>
 
 </head>
 
@@ -53,10 +65,10 @@
         <p id="number">20</p>
         <p>
             <label>Ending value:
-                <input type="text" value="0"/>
+                <input type="text" value="0" id="text"/>
             </label>
         </p>
-        <button>Count Down</button>
+        <button onclick="animation()">Count Down</button>
     </div>
 </body>
 
