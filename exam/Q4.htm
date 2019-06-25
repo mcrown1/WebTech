@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <title>Q4 - Web Tech - 2019 Summer</title>
+
+    <style type="text/css">
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        p#instruction {
+            font-family: arial;
+            font-size: 16pt;
+            color: navy;
+            padding: 10px 100px 10px 100px;
+            text-align: left;
+        }
+        div {
+            margin-left: 200px;
+            margin-right: 200px;
+            background-color: lightgrey;
+        }
+    </style>
+
+    <script type="text/javascript">
+        /* Your JavaScript goes here */
+        const squares = ["Go", "Mediterranean Avenue", "Community Chest", "Baltic Avenue", "Income Tax", "Reading Railroad", "Oriental Avenue", "Chance", "Vermont Avenue", "Connecticut Avenue", "Visiting Jail", "St. Charles Place", "Electric Company", "States Avenue", "Virginia Avenue", "Pennsylvania Railroad", "St James Place", "Community Chest", "Tennessee Avenue", "New York Avenue", "Free Parking", "Kentucky Avenue", "Chance", "Indiana Avenue", "Illinois Avenue", "B &amp; O Railroad", "Atlantic Avenue", "Ventnor Avenue", "Water works", "Marvin Gardens", "Go to Jail", "Pacific Avenue", "No. Carolina Avenue", "Community Chest", "Pennsylvania Avenue", "Short line Railroad", "Chance", "Park Place", "Luxury Tax", "Broadwalk"];
+        let loc = 0;
+        function roll() {
+            let first = Math.floor(Math.random()*5) + 1;
+            for(let i = 1; i < first + 1; i++) {
+                if (first==i) {
+                    document.getElementById("first").innerText = i;
+                }
+            }
+            let second = Math.floor(Math.random()*5) + 1;
+            for(let i = 1; i < second + 1; i++) {
+                if (second==i) {
+                    document.getElementById("second").innerText = i;
+                }
+            }
+            let go = first + second;
+            loc+=go;
+            if(loc>=40) {
+                loc = loc-40;
+                alert("You have passed Go!");
+            }
+            document.getElementById("location").innerHTML = squares[loc];
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <h1>Web Tech Exam - Q4 (15 points) </h1>
+    <p id="instruction">
+        In the game of "Monopoly", pieces move around a board that has 40 squares. In Q4.htm, the names of these squares
+        are stored in an array called <code>squares</code>. When the button is clicked, two six-sided dice are rolled
+        (HINT: The roll of a die is a random number from 0 to 5 plus 1). The page should be updated replacing the zeros
+        to show the roll of each die (5 pts). Use the state variable called <code>loc</code>, which I have already
+        created for you, to keep track of the location of the piece. Modify <code>loc</code> to add the roll of the dice
+        (4 pts). For example, if I was on square 10 and I rolled a 3 and a 4, I would be on square 17. If loc is greater
+        than 39, subtract 40 from loc and pop up an alert that says you have passed Go (3 pts). Replace the word Go on
+        the page to display the name of the square where the piece is now located (3 pts).
+    </p>
+
+
+    <div>
+        <p>Die 1: <a id="first">0</a></p>
+        <p>Die 2: <a id="second">0</a></p>
+        <p>Your piece is on <a id="location">Go</a>.</p>
+        <button onclick="roll()">Roll the dice</button>
+    </div>
+
+</body>
+
+
+<!--Congratulations! You made it!-->
+</html>

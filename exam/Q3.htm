@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Q3 - Web Tech - 2019 Summer</title>
+    <style type="text/css">
+        form {
+            font-family: Arial;
+            font-weight: bold;
+            padding: 30px;
+            width: 60%;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: Silver;
+        }
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        p#instruction {
+            font-family: arial;
+            font-size: 16pt;
+            color: navy;
+            padding: 10px 100px 10px 100px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function sum() {
+            let sum=1;
+            let form = document.getElementById("form1");
+            let start = form.from.value;
+            let end = form.to.value;
+            if(start=="" || end=="") {
+                alert("Please enter in values for From and To");
+            } else if(isNaN(start)||isNaN(end)) {
+                alert("Enter in numbers for From and To");
+            } else if (start<0) {
+                alert("Your From value needs to be above 0");
+            } else if (end <= start) {
+                alert("Your To value needs to be bigger than your From value");
+            } else {
+                for (let i = start; i < parseInt(end)+1; i++) {
+                    sum = sum * i;
+                }
+                document.getElementById("result").innerText = sum;
+            }
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Web Tech Exam - Q3</h1>
+    <p id="instruction">
+        Please create the following functionality using the form given below. The user will enter two integers (the
+        first number must be greater than 0) in the two text inputs. When Calculate button is clicked, the <b
+            style="color:red;">product</b> of <b>all</b> the
+        integers between these two numbers (inclusive) will be calculated and displayed. (10 points)
+        For full points, you need to validate the inputs properly. (5 points)
+
+    </p>
+    <form action="" method="POST" id="form1">
+        <p>
+            <label>From:
+                <input name="from" size="10" type="text" value=""/>
+            </label> <label>To:
+            <input name="to" size="10" type="text" value="">
+        </label>
+        </p>
+        <p>
+            <input name="calc" type="submit" value="Calculate" onclick="return sum()">
+            <input name="reset" type="reset" value="CLEAR">
+        </p>
+        <p>The product is <a id="result"></a>.</p>
+    </form>
+    
+
+</body>
+
+<!--Looks familiar, doesn't it?-->
+
+</html>

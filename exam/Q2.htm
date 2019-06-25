@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Q2 - Web Tech - 2019 Summer</title>
+
+    <style type="text/css">
+        h1,
+        h2 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        div.main {
+            width: 60%;
+            font-family: arial;
+            font-size: 16pt;
+            color: navy;
+            margin: 30px auto;
+        }
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            float: left;
+            margin-right: 50px;
+        }
+        #blue-circle {
+            background-color: blue;
+        }
+        #green-circle {
+            background-color: green;
+        }
+        #red-circle {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1> Web Tech Exam - Q2 </h1>
+    <div class="main">
+        <p>Please create the functionality to do the following: (a)
+            When you click any circle, h2 must change to "You just clicked (blue/green/red circle)". (b) When you
+            click the first or the second circle,
+            the color of this circle must change to a darker color, the other must change to a lighter color;
+            (c) When you click the red circle, the red circle
+            must disappear and the other two circles must change to the original colors; (d) when you click the first
+            two circles, the red circle must re-appear.</p>
+    </div>
+
+    <hr/>
+    <h2 id="heading">Play with circles</h2>
+    <div class="main">
+
+        <div class="circle" id="green-circle" onclick="color(this.id)"></div>
+
+        <div class="circle" id="blue-circle" onclick="color(this.id)"></div>
+
+        <div class="circle" id="red-circle" onclick="color(this.id)"></div>
+
+    </div>
+    <script>
+        function color(id) {
+            if(id=="green-circle") {
+                document.getElementById("heading").innerHTML = "You just clicked green circle";
+                document.getElementById("red-circle").style.display = "block";
+                document.getElementById("green-circle").style.backgroundColor = "darkgreen";
+                document.getElementById("blue-circle").style.backgroundColor = "lightblue";
+            } else if(id=="blue-circle") {
+                document.getElementById("heading").innerHTML = "You just clicked blue circle";
+                document.getElementById("red-circle").style.display = "block";
+                document.getElementById("green-circle").style.backgroundColor = "lightgreen";
+                document.getElementById("blue-circle").style.backgroundColor = "darkblue";
+            } else if(id=="red-circle") {
+                document.getElementById("heading").innerHTML = "You just clicked red circle";
+                document.getElementById("red-circle").style.display = "none";
+                document.getElementById("green-circle").style.backgroundColor = "green";
+                document.getElementById("blue-circle").style.backgroundColor = "blue";
+            }
+        }
+    </script>
+</body>
+
+<!--It's not so bad, right?-->
+
+</html>

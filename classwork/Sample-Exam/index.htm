@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 1 - index.htm</title>
+        <style type="text/css">
+            body{color: olive; font-family: cursive};
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center">Summer 2017 Exam - Index Page</h1>
+        <div style="background-color: silver; margin-left: 250px; margin-right: 250px;
+                font-family: cursive; font-size: 1.5em; font-style: italic">
+        <ol style="list-style-type: lower-roman;
+        margin-left: 200px; margin-right: 200px;
+        margin-top: 20px; margin-bottom: 20px">
+            <li>Question 2</li>
+                <ul style="list-style-type: square">
+                    <li><a href="Q2.htm#retina" id="retina" onmouseover="bgOrange(this.id)" onmouseout="bgNorm(this.id)">Retina Display</a></li>
+                    <li><a href="Q2.htm#criticism" id="criticism" onmouseover="bgOrange(this.id)" onmouseout="bgNorm(this.id)">Criticism</a></li>
+                </ul>
+            <li><a href="Q3.htm" id="three" onmouseover="bgOrange(this.id)" onmouseout="bgNorm(this.id)">Question 3</a></li>
+            <li><a href="Q4.htm" id="four" onmouseover="bgOrange(this.id)" onmouseout="bgNorm(this.id)">Question 4</a></li>
+            <li><a href="Q5.htm" id="five" onmouseover="bgOrange(this.id)" onmouseout="bgNorm(this.id)">Question 5</a></li>
+        </ol>
+        </div>
+        <script>
+            function bgOrange(id) {
+                document.getElementById(id).style.backgroundColor = "orange";
+            }
+            function bgNorm(id) {
+                document.getElementById(id).style.backgroundColor = "silver";
+            }
+        </script>
+    </body>
+</html>
