@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>About Molly</title>
+        <style type="text/css">
+            body{background:peachpuff; margin-right: 100px; margin-left: 100px; text-align: center}
+            h1{text-align: center; color: black; font-family: monospace;}
+            h3{font-family: Arial; color: navy; font-size: 1.2em}
+            a:link{color: darkred; text-decoration: none}
+            img{float: left; margin: 50px}
+            hr{height: 5px; width: 100%; background-color: red}
+            p{font-family: arial; text-align: left}
+            #feedback{
+                border-radius: 5px;
+                padding: 20px;
+            }
+        </style>
+
+</head>
+
+<body>
+        <h1>All About Molly</h1>
+        <!-- This is information about how to contact me -->
+        <h3>
+                Email: <a href="mailto:mccrown99@gmail.com">mccrown99@gmail.com</a><br>
+                Quick Links: <a href="#About Me">About Me</a> <a href="#My Interests">My Interests</a>
+        </h3>
+
+        <hr>
+        <h2><a name="About Me">About Me</a></h2>
+        
+        <p><img src="Me.JPG" alt="This is a photo of me" title="A photo of me" width="150"><br>I chose to study at <a href="https://www.babson.edu/">Babson</a> during the summer due to its locaiton and academics.
+        When I graduate I want to be a software engineer.</p>
+        
+        <hr>
+        <h2><a name="My Interests">My Interests</a></h2>        
+        <p>My favorite sport is <a href="https://www.usta.com/en/home.html">tennis</a>. I used to play in high school but haven't played in a few years. I also am interested in <a href="https://www.yang2020.com/">politics</a> and <a href="https://na.leagueoflegends.com/en/">video games</a>.</p>
+        <hr>
+        <div id="feedback">
+            <form action="action_page.php">
+                First name:<input type="text" id="first" name="first" value="Your first name..">
+                Last Name:<input type="text" id="last" name="last" value="Your last name..">
+              
+                <label for="input">Feedback:</label>
+                <textarea id="" name="subject" placeholder="Send me your thoughts.."></textarea>
+                <input type="submit" value="Submit">
+              
+            </form>
+        </div>
+        <hr>
+        <a href="low.htm">To navigation</a>
+</body> 
+
+</html>
