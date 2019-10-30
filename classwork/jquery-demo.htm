@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Template File</title>
+        <style type="text/css">
+            .red{
+                color:red;
+            }
+        </style>
+        <script type="text/javascript" src="jquery-3.4.1.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#head-1').click(function(){
+                $(this).css("background-color","red")
+                // $(this).after("<h3>It looks cool.</h3");
+                // $(this).before("<a href=low.htm")
+                $("p").toggle();
+                // $("img").fadeOut("slow");
+                $("img").animate({height: '250px', left: '200px'}, 5000);
+                });
+                
+                $("p").dblclick(function() {
+                $(this).html("<i>I Just cahnged the contents.</i>");
+                $("img").attr("src", "tiger2.jpg");
+                $("h1").addClass("red");
+            })
+            
+            })
+        </script>
+    </head>
+    <body>
+        <h1 id="head-1">This is jQuery Demo.</h1>
+
+        <p>This is a paragraph.</p>
+        <img src="tiger1.jpg" height="150">
+
+    </body>
+</html>
